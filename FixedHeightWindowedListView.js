@@ -114,6 +114,7 @@ export default class FixedHeightWindowedListView extends Component {
         {...this.props}
         ref={(ref) => { this.scrollRef = ref; }}
         onScroll={this.__onScroll}>
+        {this.props.renderHeader && this.props.renderHeader()}
         {rows}
       </ScrollView>
     );

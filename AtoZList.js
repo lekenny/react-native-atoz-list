@@ -33,6 +33,7 @@ export default class AtoZList extends Component {
     data: PropTypes.object.isRequired,
     renderCell: PropTypes.func,
     renderSection: PropTypes.func,
+    renderHeader: PropTypes.func,
     onEndReached: PropTypes.func,
   };
 
@@ -84,6 +85,7 @@ export default class AtoZList extends Component {
             ref={view => this._listView = view}
             dataSource={this.state.dataSource}
             renderCell={this.props.renderCell}
+            renderHeader={this.props.renderHeader}
             renderSectionHeader={this.props.renderSection}
             incrementDelay={16}
             initialNumToRender={8}
